@@ -643,4 +643,179 @@ mark:hover {
         transition-duration: 0.01ms !important;
     }
 }
-```
+/* ==============================
+   RESPONSIVE TAMBAHAN UNTUK HP
+============================== */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABLET DAN HP */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 5px auto;
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: clamp(21px, 5vw, 28px);
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    /* Foto profil */
+    .foto-profil {
+        width: 145px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 15px;
+    }
+
+    /* Identitas mahasiswa */
+    .identitas,
+    .kolom-foto,
+    .kolom-identitas {
+        padding-right: 0;
+    }
+
+    /* Card menjadi satu kolom */
+    .grid-informasi {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* Tabel bisa digeser ke samping */
+    .table-matakuliah {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-matakuliah th,
+    .table-matakuliah td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    /* Form */
+    form {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    /* Tombol nyaman disentuh */
+    button {
+        min-height: 44px;
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
+/* KHUSUS HP KECIL */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .foto-profil {
+        width: 120px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    form {
+        padding: 12px;
+    }
+
+    .table-matakuliah th,
+    .table-matakuliah td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin: 7px 0 3px;
+        padding: 12px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
